@@ -9,7 +9,7 @@ export const cartReducer = (state = {cartItems: []}, action) => {
             
             let existItem = {}
             try{
-                JSON.parse(state.cartItems).map((p) => {if(p._id == id){data = p}})
+                JSON.parse(state.cartItems).map((p) => {if(p._id == item._id){existItem = p}})
             }catch{
 
             }

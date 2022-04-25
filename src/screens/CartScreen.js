@@ -22,6 +22,9 @@ const CartScreen = ({match}) => {
     } 
   }, [dispatch, productId, qty])
 
+  const removeFromCartHandler = () =>{
+    console.log('Remove');
+  }
   return (
       <Row>
         <Col md={8}>

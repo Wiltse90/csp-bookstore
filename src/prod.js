@@ -42,7 +42,7 @@ const products = [
       name: 'The Micro Economy Today',
       image: '/images/econ2.jpeg',
       description:
-        'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
+        '',
       brand: 'Bradley Schiller, Karen Gebhardt',
       category: 'Economics',
       price: 59.99,
@@ -55,9 +55,9 @@ const products = [
       name: 'Principles of Macroeconomics',
       image: '/images/econ3.jpeg',
       description:
-        'Get a better handle on your games with this Logitech LIGHTSYNC gaming mouse. The six programmable buttons allow customization for a smooth playing experience',
+        '',
       brand: 'Robert Frank, Ben Bernanke, Kate Antonovics, Ori Heffetz',
-      category: 'Electronics',
+      category: 'Economics',
       price: 59.99,
       countInStock: 7,
       rating: 3.5,
@@ -81,7 +81,7 @@ const products = [
       name: 'Launching the Imagination',
       image: '/images/art1.jpeg',
       description:
-        'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
+        '',
       brand: 'Mary Stewart',
       category: 'Art',
       price: 69.99,

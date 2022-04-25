@@ -1,3 +1,4 @@
+import React from 'react'
 import {Route, Routes, Link} from 'react-router-dom';
 import './App.css';
 import Header from './components/Header'
@@ -7,16 +8,18 @@ import Login from './components/Login'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
 import About from './components/About';
+import CartScreen from './screens/CartScreen';
 
 
 function App() {
-  return (
-    <div className="App">
 
+  return (
+    <div  className="App">
       <Routes>
         <Route path="/" element={ <HomeScreen /> } />
         <Route path="/product/:id" element={ <ProductScreen /> } />
-        <Route path="/cart" element={ <Cart /> } />
+        <Route path={"/cart"} element={ <CartScreen /> } />
+        <Route path={"/cart/:id"} element={<CartScreen /> } />
         <Route path="/login" element={ <Login /> } />
         <Route path="/about" element={ <About /> } />
       </Routes>

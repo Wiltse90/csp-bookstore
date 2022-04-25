@@ -1,0 +1,11 @@
+#authContainer{
+    background-color: rgb(52,58,64);
+    color: white;
+    padding: 1rem;
+    max-width: 30vh;
+    height: 400px;
+}
+
+.button{
+    margin: 7px;
+}

@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
 
-    //const url = 'mongodb://localhost:27017/applicationdb' 
-    const url = 'mongodb+srv://appuser:mongodb123@cluster0.na7lp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+    const url = 'mongodb://localhost:27017/applicationdb' 
+
 
     try {
         const conn = await mongoose.connect(url)

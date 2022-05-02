@@ -3,6 +3,7 @@ import products from './data/prod.js'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
 import userRoutes from './routes/userRoutes.js'
+import path from 'path'
 
 dotenv.config()
 
@@ -16,9 +17,7 @@ app.use('/api/users', userRoutes)
 app.use('/login', userRoutes)
 
 
-app.get('/', (req, res) => {
-    res.send('<h1>Hello World!</h1>')
-})
+
 
 app.get('/api/product', (req, res) => {
     res.json(products)
@@ -29,14 +28,26 @@ app.get('/api/product/:id', (req, res) => {
     res.json(product)
 })
 
-app.use('/')
+//app.use('/')
 
 const __dirname = path.resolve()
-if(process.env.NODE_ENV === 'production'){
-    app.use(express.static(path.join(__dirname, 'frontend/build')))
 
-    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html')))
-}
+// Have Node serve the files for our built React app
+app.use(express.static(path.resolve(__dirname, './frontend/build')));
+
+// Handle GET requests to /api route
+app.get("/api", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
+// All other GET requests not handled before will return our React app
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './frontend/build', 'index.html'));
+});
+app.get('/', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './frontend/build', 'index.html'));
+})
+
 
 const PORT = process.env.PORT || 5000
 const MODE = process.env.NODE_ENV 

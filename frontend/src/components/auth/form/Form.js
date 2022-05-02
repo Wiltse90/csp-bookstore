@@ -1,4 +1,4 @@
-import { useCallback, useState, createContext } from "react";
+import { useCallback, useState } from "react";
 import React from "react";
 import Login from "../login/Login";
 import Signup from "../signup/Signup";
@@ -6,9 +6,7 @@ import './style.css';
 
 
 const Form = () => {
-    const LoginContext = createContext();
-    const [login, setLogin] = useState("");
-
+    
     const [user, setUser] = useState(
         {
             uname:"",
@@ -33,9 +31,8 @@ const Form = () => {
     return (   
 
         <div id="authContainer">
-        <LoginContext.Provider value={setLogin} >
+
             {getForm()}
-        </LoginContext.Provider>
         </div>
     )
 }

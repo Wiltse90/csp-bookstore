@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import './bootstrap.min.css'
 import { Provider } from 'react-redux';
@@ -9,7 +9,9 @@ import {BrowserRouter} from 'react-router-dom';
 import Header from './components/Header'
 import Footer from './components/Footer';
 
+
 ReactDOM.render(
+
   
   <Provider store={store}>
   <BrowserRouter>
@@ -17,6 +19,7 @@ ReactDOM.render(
     <App />
     <Footer/>
   </BrowserRouter>
+
   </Provider>,
   document.getElementById('root')
 );

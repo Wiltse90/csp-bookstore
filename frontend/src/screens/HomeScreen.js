@@ -1,9 +1,28 @@
-import React from 'react'
-import products from '../prod'
+import React, { useState, useEffect} from 'react'
 import Product from '../components/Product'
 import {Row, Col} from 'react-bootstrap'
+import axios from 'axios'
+
 
 const HomeScreen = () => {
+
+  const [ products, setProducts] = useState([])
+
+  /*
+  axios.get('/api/product').then(response => {
+    setProducts(response.data)
+  })*/
+  
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const { data } = await axios.get('/api/product')
+      setProducts(data)
+    }
+
+    fetchProducts() },[])
+
+    if(products){
   return (
       <div>
           <h1>Latest Products</h1>
@@ -16,6 +35,7 @@ const HomeScreen = () => {
           </Row>
       </div>
   )
+              }
 }
 
 export default HomeScreen

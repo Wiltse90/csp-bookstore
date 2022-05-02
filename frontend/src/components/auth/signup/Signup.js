@@ -37,14 +37,12 @@ const Signup = (props) => {
     
     return (
         <>
-        <form className="frmSignup">
+        <form className="frmSignup" action="http://localhost:5000/api/users" method="POST">
         <h1>Register</h1>
-        <label for="fname">First name:</label><br/>
-        <input type="text" id="fname" name="fname"  onChange={(e) => user.fName = e.target.value} defaultValue={props.user.fName}/><br/>
-        <label for="lname">Last name:</label><br/>
-        <input type="text" id="lname" name="lname" onChange={(e) => user.lName = e.target.value } defaultValue={props.user.lName}/><br/>
-        <label for="uname">Username:</label><br/>
-        <input type="text" id="uname" name="uname" onChange={(e) => checkUser(e)} defaultValue={props.user.uname}/><br/>
+        <label for="name">Name:</label><br/>
+        <input type="text" id="name" name="name"  onChange={(e) => user.fName = e.target.value} defaultValue={props.user.fName}/><br/>
+        <label for="email">Email:</label><br/>
+        <input type="text" id="email" name="email" onChange={(e) => checkUser(e)} defaultValue={props.user.uname}/><br/>
         <label for="password">Password:</label><br/>
         <input type="text" id="password" name="password" onChange={(e) => user.pwd = e.target.value} defaultValue={props.user.pwd}/><br/><br/>
         <input type="submit" value="Submit" />

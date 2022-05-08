@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Routes, Link} from 'react-router-dom';
+import {Route, Routes, Link, BrowserRouter} from 'react-router-dom';
 import './App.css';
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
@@ -13,6 +13,7 @@ function App() {
 
   return (
     <div  className="App">
+      <BrowserRouter>
       <Routes>
         <Route path="/" element={ <HomeScreen /> } />
         <Route path="/product/:id" element={ <ProductScreen /> } />
@@ -22,7 +23,7 @@ function App() {
         <Route path="/login" element={ <LoginScreen /> } />
         <Route path="/about" element={ <About /> } />
       </Routes>
-
+      </BrowserRouter>
     </div>
   );
 }

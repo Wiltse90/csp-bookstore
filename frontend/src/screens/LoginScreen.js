@@ -31,7 +31,6 @@ const LoginScreen = () => {
   const submitHandler = (e) => {
     e.preventDefault()
     dispatch(login(email, password))
-    
   }
   
   return (
@@ -50,7 +49,7 @@ const LoginScreen = () => {
           <Form.Control type='password' placeholder='Enter password' value={password} onChange={(e) => setPassword(e.target.value)}>
           </Form.Control>
         </Form.Group>
-        <Button type='submit' variant='primary'>
+        <Button type='submit' id='btnLogin' variant='primary'>
         Login
       </Button>
       </Form>

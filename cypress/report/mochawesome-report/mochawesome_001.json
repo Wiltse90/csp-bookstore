@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-06T15:13:25.708Z",
+    "end": "2022-05-06T15:13:35.560Z",
+    "duration": 9852,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d43647e4-afd1-49aa-8f83-87653acbba00",
+      "title": "",
+      "fullFile": "cypress/integration/user-e2e-test.js",
+      "file": "cypress/integration/user-e2e-test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9125e4c1-17a4-4403-95dd-f5bd6f4f853f",
+          "title": "login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user can login",
+              "fullTitle": "login user can login",
+              "timedOut": null,
+              "duration": 7578,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login\ncy.visit('http://localhost:5000/login');\ncy.get('#email').type('wiltses@csp.edu');\ncy.get('#password').type('password4');\ncy.get(\".btn-primary\").click(); //product + shopping cart\ncy.wait(1000);\ncy.visit('http://localhost:5000/product/9781260771381');\ncy.get('.form-select').select('3');\ncy.wait(1000);\ncy.get(\".btn-block\").click(); //logout\ncy.wait(1000);\ncy.visit('http://localhost:5000');\ncy.get(\"#username\").click();\ncy.wait(1000);\ncy.get('.dropdown-item').click();",
+              "err": {},
+              "uuid": "67baadda-5747-46aa-8577-579627b68ce0",
+              "parentUUID": "9125e4c1-17a4-4403-95dd-f5bd6f4f853f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67baadda-5747-46aa-8577-579627b68ce0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

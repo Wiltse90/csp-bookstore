@@ -1,0 +1,222 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-06T14:59:31.157Z",
+    "end": "2022-05-06T15:45:10.982Z",
+    "duration": 22868,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d43647e4-afd1-49aa-8f83-87653acbba00",
+      "title": "",
+      "fullFile": "cypress/integration/user-e2e-test.js",
+      "file": "cypress/integration/user-e2e-test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9125e4c1-17a4-4403-95dd-f5bd6f4f853f",
+          "title": "login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user can login",
+              "fullTitle": "login user can login",
+              "timedOut": null,
+              "duration": 7578,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login\ncy.visit('http://localhost:5000/login');\ncy.get('#email').type('wiltses@csp.edu');\ncy.get('#password').type('password4');\ncy.get(\".btn-primary\").click(); //product + shopping cart\ncy.wait(1000);\ncy.visit('http://localhost:5000/product/9781260771381');\ncy.get('.form-select').select('3');\ncy.wait(1000);\ncy.get(\".btn-block\").click(); //logout\ncy.wait(1000);\ncy.visit('http://localhost:5000');\ncy.get(\"#username\").click();\ncy.wait(1000);\ncy.get('.dropdown-item').click();",
+              "err": {},
+              "uuid": "67baadda-5747-46aa-8577-579627b68ce0",
+              "parentUUID": "9125e4c1-17a4-4403-95dd-f5bd6f4f853f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "67baadda-5747-46aa-8577-579627b68ce0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7578,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "9d9dc315-4019-4972-a823-4e6f73167551",
+      "title": "",
+      "fullFile": "cypress/integration/user-e2e-test.js",
+      "file": "cypress/integration/user-e2e-test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7f27b141-89a5-4dc9-819f-9a16b77a9973",
+          "title": "login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user can login",
+              "fullTitle": "login user can login",
+              "timedOut": null,
+              "duration": 8016,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login\ncy.visit('http://localhost:5000/login');\ncy.get('#email').type('wiltses@csp.edu');\ncy.get('#password').type('password4');\ncy.get(\".btn-primary\").click(); //product + shopping cart\ncy.wait(1000);\ncy.visit('http://localhost:5000/product/9781260771381');\ncy.get('.form-select').select('3');\ncy.wait(1000);\ncy.get(\".btn-block\").click(); //logout\ncy.wait(1000);\ncy.visit('http://localhost:5000');\ncy.get(\"#username\").click();\ncy.wait(1000);\ncy.get('.dropdown-item').click();",
+              "err": {},
+              "uuid": "7205bfb4-7cd9-417e-8f2a-10ee6402424d",
+              "parentUUID": "7f27b141-89a5-4dc9-819f-9a16b77a9973",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7205bfb4-7cd9-417e-8f2a-10ee6402424d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8016,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c949b0d3-2be7-44a5-a333-f8ce63e01899",
+      "title": "",
+      "fullFile": "cypress/integration/user-e2e-test.js",
+      "file": "cypress/integration/user-e2e-test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08ab0930-3770-4e4f-86b2-7d7fd36fc47d",
+          "title": "login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user can login",
+              "fullTitle": "login user can login",
+              "timedOut": null,
+              "duration": 7274,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//login\ncy.visit('http://localhost:5000/login');\ncy.get('#email').type('wiltses@csp.edu');\ncy.get('#password').type('password4');\ncy.get(\".btn-primary\").click(); //product + shopping cart\ncy.wait(1000);\ncy.visit('http://localhost:5000/product/9781260771381');\ncy.get('.form-select').select('3');\ncy.wait(1000);\ncy.get(\".btn-block\").click(); //logout\ncy.wait(1000);\ncy.visit('http://localhost:5000');\ncy.get(\"#username\").click();\ncy.wait(1000);\ncy.get('.dropdown-item').click();",
+              "err": {},
+              "uuid": "fe2e9ffb-a1fd-4797-ad51-c55b6829230c",
+              "parentUUID": "08ab0930-3770-4e4f-86b2-7d7fd36fc47d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fe2e9ffb-a1fd-4797-ad51-c55b6829230c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7274,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
